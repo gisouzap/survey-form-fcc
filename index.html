@@ -1,14 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form - FreeCodeCamp</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <body>
+    <header>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Help us to know more about you!</p>
 
-<body>
+      <form id="survey-form">
+        <label for="name" id="name-label">Name</label>
+        <input id="name" type="text" placeholder="your name..." />
+        <label for="email" id="email-label">E-mail</label>
+        <input
+          type="email"
+          id="email"
+          pattern=".+@.+.com"
+          placeholder="your best email..."
+        />
+        <label for="age" id="number-label">Age (optional):</label>
+        <input
+          type="number"
+          id="number"
+          min="15"
+          max="100"
+          placeholder="your age"
+        />
 
-</body>
+        <label for="dropdown"
+          >Which option best describes your current role?</label
+        >
+        <select id=" dropdown">
+          <option value="frontend">Front-end</option>
+          <option value="backend">Back-end</option>
+          <option value="fullstack">Full-Stack</option>
+          <option value="devops">DevOps</option>
+        </select>
 
+        <label>Experience:</label>
+        <input
+          name="experience-level"
+          value="junior"
+          type="radio"
+          class="input-radio"
+          checked
+        />Junior
+        <input
+          name="experience-level"
+          value="analyst"
+          type="radio"
+          class="input-radio"
+        />Analyst
+        <input
+          name="experience-level"
+          value="senior"
+          type="radio"
+          class="input-radio"
+        />Senior
+        <input
+          name="experience-level"
+          value="Especialist"
+          type="radio"
+          class="input-radio"
+        />Especialist
+      </form>
+    </header>
+  </body>
 </html>
